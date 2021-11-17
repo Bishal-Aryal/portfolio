@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description"  content="This is front page">
+        <meta name="keywords" content="course wrok">
+        <meta name="aurthor" content="Bishal Aryal">
+        <title>contact</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .foot ul {
+            flex: 1;
+            text-align: center;
+             justify-content: center;
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 300px;
+            margin-top: 10px;
+            margin-bottom: 100px;
+        }                                       
+        .foot ul li {
+            display: inline-block;
+            padding: 40px;
+            margin-left: 130px;
+            margin-bottom: 40px;
+                    
+        }
+        .foot a {
+            display: inline-block;
+            color: black;
+            font-size: 50px;
+            text-align: center;
+        }
+         .foot a:hover {
+            color: orange;
+            transition: 0.2s ease;
+        }
+        .foot p{
+            font-size: 20px;
+            margin-left: 250px;
+                            
+        }                           
+        .button {
+            font-size: 15px;
+            padding: 5px;
+            border-style: none;
+            background: #4b4b4b;
+            color: white;
+        }
+        .message {
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            margin-left: 300px;
+            margin-top: 200px;
+        }
+        .message h1 {
+            font-size: 50px;
+        }
+        .message p {
+            font-size: 30px;
+            margin-left: 40px;
+        }
+        .contact {
+            margin-left: 60em;
+            margin-top: -260px;
+        }
+        .button:hover {
+            color: white;
+            background-color: #ff523b;
+            transition: 0.2s ease;
+        }
+        </style>
+    </head>
+    <body style="background: radial-gradient(#fff, #ffd6d6);">
+        <header>
+            <div class="container">
+                <div class="navbar" id="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="CV.html">CV</a></l>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="research.html">Research</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section>
+             <article>
+                <div class="message">
+                    <h1>
+                        Get in touch
+                    </h1>
+                        <p>
+                            fill up to contact 
+                        </p>                        
+                </div>
+            </article>
+            <article>
+                <form name="messageForm" onsubmit="validateForm()">
+                    <div class="contact">
+                        First Name * <br><input type="text" name="first_name" style="border-radius: 1em; border-width: 0.1em; background: none;"><br><br>
+                        Last Name * <br><input type="text" name="last_name" style="border-radius: 1em; border-width: 0.1em; background: none;"><br><br>
+                        Phone number * <br> <input  type="text" name="ph_number" style="border-radius: 1em; border-width: 0.1em; background: none;"><br><br>
+                        Email * <br><input  type="email" name="email" style="border-radius: 1em; border-width: 0.1em; background: none;"><br><br>
+                        Message * <br><textarea name="message" rows="10" cols="30" style="border-radius: 1em; border-width: 0.1em; background: none;">
+                        </textarea><br>
+                        <input type="submit" value="send" class="button" >
+                    </div>
+                </form> 
+                <!--the internal javascript is used to check the validation of form. Internal 
+                javascript is used because it is only used in this particular page and makes easier to debug-->
+                <script>
+                    function validateForm(){
+                        var fname = document.forms["messageForm"]["first_name"].value;
+                        var lname = document.forms["messageForm"]["last_name"].value;
+                        var pnumber = document.forms["messageForm"]["ph_number"].value;
+                        var email = document.forms["messageForm"]["email"].value;
+                        var message = document.forms["messageForm"]["message"].value;
+                            
+                        if (fname == "" || lname =="" || email ==""){
+                            alert("please fill out the empty field ");
+                        }
+                        else{
+                            alert("Thank you");
+                        }
+                    }                          
+                </script>
+            </article>
+        </section>
+        <div class="foot">  
+            <p>You can also notify me through social media</p>                            
+                <ul >
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100006076606745" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li></a>
+                    <li>
+                        <a href="https://www.instagram.com/v_sal.ar_yal/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                    </li></a>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li></a>
+                </ul>                        
+        </div>                     
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta tags-->
+        <meta name="description"  content="This is front page">
+        <meta name="keywords" content="course wrok">
+        <meta name="aurthor" content="Bishal Aryal">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .image{
+        margin-left: 350px;
+        
+    }
+    .img{
+        width: 600px;
+        height: 500px;
+        padding: 2px;
+        border: solid black;
+        margin: 5px;
+        
+    }
+    .image2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+    }
+    .img2{
+        margin-left: -100px;
+    }
+    p{
+        margin-top: 20px;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .bttn{
+        margin-left: 650px;
+        font-size: 15px;
+        padding: 5px;
+        border-style: none;
+        background: #4b4b4b;
+        color: white;
+    }
+    .bttn:hover {
+        color: white;
+        background-color: #ff523b;
+        transition: 0.2s ease;
+    }
+    .hide{
+        display: none;
+        
+    }
+    .toggle_image{
+        transition: all 0.5s ease;
+    }
+    </style>   
+    </head>
+    <body style="  background: radial-gradient(#fff, #ffd6d6);">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="CV.html">CV</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h2><ins>Justin Maelzer -  contact page</ins></h2>
+                <div class="image">                                   
+                         <img class = "img hide" id = "image1" src="images/contact.png">
+                        <img  class = "img hide" id = "image2" src="images/mycontact.png">
+                </div>
+            <button  class = "bttn" onclick="toggle_image()">Toggle</button>        
+            <p>
+                In the left side there is a contact page of the Portfolio website of Justin Maelzer. He has put an image at the middle of the page in left side while I have put a little message or instruction. There is personal bio detail along with a form to contact him but i have just included a contact form. In the top left corner there is a name and his job and in top right there is navigation bar while my page is blank in the top left but has navigation bar in top right. I have additionally added social media links as icon but there is no such links in his page.
+            </p><br><br>
+            <h2><ins>Robert Irish -  Home page</ins></h2>
+            <div class="image">      
+                <!--img tag is used to insert images-->                             
+                <img class = "img hide" id = "image3" src="images/home.png">
+                <img class = "img hide" id = "image4" src="images/home1.png" >
+                <img class = "img hide" id = "image5" src="images/home 2.png">
+            </div>
+            <button  class = "bttn" onclick="toggle_images()">Toggle</button>
+            <p>
+                There is a home page of the Portfolio website of Robert Irish which i have used to compare with mine. In the header he has introduced himself at first while I have put a little message and quotation. Both the webpages have an image at right side. The navigation bar are quite similar but he has additional icon and his name at top left corner of the webpage which is linked with the home page. I have introduced my self in the middle part of the page using article inside section tag. I have added footer to the webpage while his webpage does not have one. The footer part contain social media links as icon and some Copyright claims.
+            </p><br><br>
+            <h2><ins>Adrien Loret -  validation prompt</ins></h2>
+            <div class="image">                                   
+                <img  class = "img hide" id = "image6" src="images/validation.png">
+               <img class = "img hide" id = "image7" src="images/myvalidation.png">
+            </div> 
+            <button  class = "bttn" onclick="toggle_img()">Toggle</button>       
+            <p>
+                I have used the contact page of the Portfolio website of Adrien Loret to compare validation prompt with my website. He has made an unique alert message using css and Javascript. when the given fields are empty the alert message pops just below the empty field but in my website the message pops in the top of the webpage. 
+            </p><br><br>
+            </div>
+           
+            <script>
+                /*function is used to toggle images*/
+                function toggle_image(){
+                    var p1 = document.getElementById('image1');
+                    var p2 = document.getElementById('image2');
+        
+                    if(p1.style.display == 'none'){
+                        p1.style.display = 'block';
+                        p2.style.display = 'none';
+                    }
+                    else{
+                        p1.style.display = 'none';
+                        p2.style.display = 'block';
+                    }
+                }
+                /* keeps one of the image visible which has been hidden by css*/
+                document.getElementById('image1').style.display = 'block';
+        
+                function toggle_img(){
+                    var p6 = document.getElementById('image6');
+                    var p7 = document.getElementById('image7');
+
+                    if(p6.style.display == 'none'){
+                        p6.style.display = 'block';
+                        p7.style.display = 'none';
+                    }
+                    else{
+                        p6.style.display = 'none';
+                        p7.style.display = 'block';
+                    }
+                }
+                document.getElementById('image6') .style.display = 'block' ;
+                
+                /*Array is used to iterate images and function is used to toggle the images */
+                var image  = document.getElementById('image3');
+                var imageArray = ["images/home.png", "images/home1.png", "images/home 2.png"];
+                var imageIndex = 1;
+
+                function toggle_images(){   
+                    image.setAttribute("src", imageArray[imageIndex]);
+                    imageIndex++;
+                    if(imageIndex > 2) {imageIndex = 0;}
+                }
+                document.getElementById('image3').style.display = 'block';
+            </script>
+    </body>
+</html>
